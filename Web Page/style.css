@@ -1,0 +1,123 @@
+@media screen and (max-width:900px) {
+  #weather {
+    display: none;
+  }
+}
+
+@media screen and (max-width:992px) {
+  #RemoveOnMediumScreen {
+    display: none;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  #RemoveNewsStories {
+    display: none;
+  }
+}
+
+@media screen and (max-width:768px) {
+  #RemoveSmallScreen {
+    display: none;
+  }
+}
+
+@media screen and (min-width:992px) {
+  .col-lg-1 {
+    max-width: 37.5% !important;
+    flex-basis: 37.5% !important;
+  }
+}
+
+.container {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.bg-black {
+  background-color: black;
+}
+
+.bg-grey {
+  background-color: #DFDFDF;
+}
+
+.bg-blue {
+  color: white;
+  background-color: #1491ED;
+}
+
+.navbar {
+  height: 40px;
+}
+
+.navbar-toggler {
+  border-color: transparent !important;
+}
+
+.navbar-brand {
+  position: absolute;
+  left: 45%;
+}
+
+.row {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-top: 1rem;
+}
+
+.row1-padding {
+  padding-left: 3rem;
+  padding-top: 2rem;
+}
+
+mark.blue {
+  color: blue;
+  background: transparent;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.row-outer-padding {
+  padding-left: .5rem;
+  padding-top: 2rem;
+  padding-right: .5rem;
+}
+
+.story-padding {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+}
+
+.no-hor-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.social-text {
+  font-size: 10px;
+}
+
+.fa-rss-square {
+  font-size: 30px;
+  color: #f26522;
+}
+
+.fa-facebook-square {
+  font-size: 30px;
+  color: #3b5998;
+}
+
+.fa-twitter-square {
+  font-size: 30px;
+  color: #1da1f2;
+}
+
+.fa-comments {
+  font-size: 30px;
+  color: pink;
+}

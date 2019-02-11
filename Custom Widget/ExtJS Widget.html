@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/classic/theme-classic/resources/theme-classic-all.css" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/extjs/6.0.0/ext-all.js"></script>
+
+  <script type="text/javascript">
+    // Creation of data model
+    Ext.define('JobsDataModel', {
+      extend: 'Ext.data.Model',
+      fields: [{
+          Title: 'Title',
+          mapping: 'Title'
+        },
+        {
+          LocationDescription: 'LocationDescription',
+          mapping: 'LocationDescription'
+        },
+        {
+          ShortDescription: 'ShortDescription',
+          mapping: 'ShortDescription'
+        },
+        {
+          DetailsUrl: 'DetailsUrl',
+          mapping: 'DetailsUrl'
+        },
+        {
+          RecruiterName: 'RecruiterName',
+          mapping: 'RecruiterName'
+        }
+      ]
+    });
+
+    Ext.onReady(function() {
+      // Store data
+      /*
+                  var myData = [
+                     { name : "Asha", age : "16", marks : "90" },
+                     { name : "Vinit", age : "18", marks : "95" },
+                     { name : "Anand", age : "20", marks : "68" },
+                     { name : "Niharika", age : "21", marks : "86" },
+                     { name : "Manali", age : "22", marks : "57" }
+                  ];
+      */
+      var myData = [{
+        "JobID": "837685",
+        "Title": "FT & PT Plasma Center Technicians",
+        "LocationDescription": "Fargo & Moorhead locations!",
+        "SalaryDescription": "Negotiable",
+        "ShortDescription": "No experience necessary!",
+        "DetailsUrl": "https:\/\/www.jobshq.com\/job\/837685\/ft-and-pt-plasma-center-technicians\/?TrackID=11",
+        "ApplyUrl": "https:\/\/www.jobshq.com\/apply\/837685\/ft-and-pt-plasma-center-technicians\/?TrackID=11",
+        "LogoUrl": "\/\/www.jobshq.com\/getasset\/a644beeb-b67f-4bf6-b635-0b4a06a8c011\/",
+        "RecruiterName": "Biolife Plasma Services of Moorhead",
+        "StartDate": "2019-01-30 10:10:46",
+        "EndDate": "2019-03-01 23:59:59",
+        "Reference": []
+      }, {
+        "JobID": "837877",
+        "Title": "Project Manager",
+        "LocationDescription": "Clearbrook, MN",
+        "SalaryDescription": "Join our team!",
+        "ShortDescription": "Attention Project Managers, here is the opportunity for you! Charps, headquartered in Clearbrook, MN, maintains a solid reputation as a preferred p...",
+        "DetailsUrl": "https:\/\/www.jobshq.com\/job\/837877\/project-manager\/?TrackID=11",
+        "ApplyUrl": "https:\/\/www.jobshq.com\/apply\/837877\/project-manager\/?TrackID=11",
+        "RecruiterName": "Charps",
+        "StartDate": "2019-02-01 00:00:00",
+        "EndDate": "2019-03-12 00:00:00",
+        "Reference": "2723453"
+      }, {
+        "JobID": "836781",
+        "Title": "Truck Driver",
+        "LocationDescription": "Edgeley, North Dakota (US)",
+        "SalaryDescription": "DOE",
+        "ShortDescription": "Grow your career with Allied Agronomy! \u00a0",
+        "DetailsUrl": "https:\/\/www.jobshq.com\/job\/836781\/truck-driver\/?TrackID=11",
+        "ApplyUrl": "https:\/\/www.jobshq.com\/apply\/836781\/truck-driver\/?TrackID=11",
+        "LogoUrl": "\/\/www.jobshq.com\/getasset\/ede5c953-2e6d-498c-9755-fca4c5d690af\/",
+        "RecruiterName": "Allied Agronomy",
+        "StartDate": "2019-01-22 16:24:00",
+        "EndDate": "2019-02-21 23:59:00",
+        "Reference": []
+      }, {
+        "JobID": "837815",
+        "Title": "Grain Management Specialist",
+        "LocationDescription": "West Fargo, North Dakota",
+        "SalaryDescription": "Base pay $40K-$50K per year plus commissions",
+        "ShortDescription": "Commission package is very lucrative allowing an opportunity to more than double your base pay!",
+        "DetailsUrl": "https:\/\/www.jobshq.com\/job\/837815\/grain-management-specialist\/?TrackID=11",
+        "ApplyUrl": "https:\/\/www.jobshq.com\/apply\/837815\/grain-management-specialist\/?TrackID=11",
+        "LogoUrl": "\/\/www.jobshq.com\/getasset\/0a48cf68-9cd8-45e9-a2fe-9b93d0a97cd6\/",
+        "RecruiterName": "Custom Marketing Company",
+        "StartDate": "2019-01-31 09:26:00",
+        "EndDate": "2019-03-02 23:59:00",
+        "Reference": []
+      }, {
+        "JobID": "838112",
+        "Title": "Sales and Marketing Instructor",
+        "LocationDescription": "East Grand Forks, MN",
+        "SalaryDescription": "Join our team!",
+        "ShortDescription": "NOTICE OF VACANCY: It is the policy of Northland Community and Technical College to ensure that the selection for this position is accessible to al...",
+        "DetailsUrl": "https:\/\/www.jobshq.com\/job\/838112\/sales-and-marketing-instructor\/?TrackID=11",
+        "ApplyUrl": "https:\/\/www.jobshq.com\/apply\/838112\/sales-and-marketing-instructor\/?TrackID=11",
+        "RecruiterName": "Northland Community & Technical College",
+        "StartDate": "2019-02-04 00:00:00",
+        "EndDate": "2019-03-12 00:00:00",
+        "Reference": "2723753"
+      }, {
+        "JobID": "837775",
+        "Title": "Shift Supervisor",
+        "LocationDescription": "International Falls, Minnesota (US)",
+        "SalaryDescription": "DOE",
+        "ShortDescription": "At PCA, you\u2019ll find the best people in the industry operating in a \u201cgolden rule\u201d culture.",
+        "DetailsUrl": "https:\/\/www.jobshq.com\/job\/837775\/shift-supervisor\/?TrackID=11",
+        "ApplyUrl": "https:\/\/www.jobshq.com\/apply\/837775\/shift-supervisor\/?TrackID=11",
+        "LogoUrl": "\/\/www.jobshq.com\/getasset\/92a9a7bf-d23b-4f81-a0cb-c46fbf0ca92b\/",
+        "RecruiterName": "Packaging Corporation of America",
+        "StartDate": "2019-01-31 08:24:00",
+        "EndDate": "2019-03-02 23:59:00",
+        "Reference": []
+      }, {
+        "JobID": "837448",
+        "Title": "Quality Inspector",
+        "LocationDescription": "Fargo, ND",
+        "SalaryDescription": "Join our team!",
+        "ShortDescription": "JOIN OUR TEAM WITH GREAT BENEFITS! Quality Inspector - Mid America Steel - Fargo Fargo, ND steel fabricator is looking for a Quality Inspector to c...",
+        "DetailsUrl": "https:\/\/www.jobshq.com\/job\/837448\/quality-inspector\/?TrackID=11",
+        "ApplyUrl": "https:\/\/www.jobshq.com\/apply\/837448\/quality-inspector\/?TrackID=11",
+        "RecruiterName": "Mid America Steel",
+        "StartDate": "2019-01-29 00:00:00",
+        "EndDate": "2019-03-12 00:00:00",
+        "Reference": "2722190"
+      }];
+
+      // Creation of first grid store
+      var gridStore = Ext.create('Ext.data.Store', {
+        model: 'JobsDataModel',
+        data: myData
+      });
+
+      // Creation of first grid
+      Ext.create('Ext.grid.Panel', {
+        id: 'gridId',
+        store: gridStore,
+        stripeRows: true,
+        title: 'Students Grid', // Title for the grid
+        renderTo: 'gridDiv', // Div id where the grid has to be rendered
+        width: 600,
+        collapsible: true, // property to collapse grid
+        enableColumnMove: true, // property which allows column to move to different position by dragging that column.
+        enableColumnResize: true, // property which allows to resize column run time.
+
+        columns: [{
+          header: "Title",
+          dataIndex: 'Title',
+          id: 'Title',
+          flex: 1, // property defines the amount of space this column is going to take in the grid container with respect to all.
+          sortable: true, // property to sort grid column data.
+          hideable: false // property which allows column to be hidden run time on user request.
+        }, {
+          header: "Location",
+          dataIndex: 'LocationDescription',
+          flex: .5,
+          sortable: true,
+          hideable: true // this column will not be available to be hidden.
+        }, {
+          header: "Description",
+          dataIndex: 'ShortDescription',
+          flex: .5,
+          sortable: true,
+          hideable: true
+
+        }, {
+          header: "Website",
+          dataIndex: 'DetailsUrl',
+          flex: .5,
+          sortable: true,
+          hideable: true
+        }, {
+          header: "Recruiter",
+          dataIndex: 'RecruiterName',
+          flex: .5,
+          sortable: true,
+          hideable: true
+        }]
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="gridDiv"></div>
+</body>
+
+</html>
