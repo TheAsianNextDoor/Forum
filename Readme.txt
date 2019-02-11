@@ -26,7 +26,6 @@
 		The testing must be done manually. First input the expected ZeroCool string into the assertEquals statment, then set the size of the array. If the array size doesn't match the number of indeces in the expected ZeroCool string, the test will fail
 
 	Methods
-
 		reduceArraySize - resize the array from 0 to n. This allows you to use Junit package for testing
 
 
