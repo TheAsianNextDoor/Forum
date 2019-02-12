@@ -29,6 +29,32 @@
   }
 }
 
+.fill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fill img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
+}
+
+.fill-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.fill-small img {
+  flex-shrink: 0;
+  max-width: 100%;
+  max-height: 100%
+}
+
 .container {
   padding-left: 0;
   padding-right: 0;
