@@ -11,16 +11,16 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 </head>
 
 <body class="bg-grey">
-  <div class="container-fluid pb-2">
+  <header class="container-fluid pb-2">
     <!-- Navbar -->
     <nav class="navbar navbar-light bg-grey justify-content-center">
       <button class="navbar-toggler mr-auto" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <!-- Brand -->
       <a class="navbar-brand px-0 pt-3 fill-small" href="#" style="max-width: 90px;">
         <img src="Images/inforum.png" class="d-inline-block" height="100%" width="100%" alt="">
       </a>
@@ -42,34 +42,35 @@
         </div>
       </div>
     </nav>
-  </div>
-  <div class="collapse" id="navbarToggleExternalContent">
-    <div class="bg-grey p-4">
-      <ul class="list-group">
-        <li class="list-inline-item"><a class="text-dark" target="_blank" href="#">Link 1</a></li>
-        <li class="list-inline-item"><a class="text-dark" target="_blank" href="#">Link 2</a></li>
-        <li class="list-inline-item"><a class="text-dark" target="_blank" href="#">Link 3</a></li>
-      </ul>
     </div>
-  </div>
-
+    <div class="collapse" id="navbarToggleExternalContent">
+      <div class="bg-grey p-4">
+        <ul class="list-group">
+          <li class="list-inline-item"><a class="text-dark" target="_blank" href="#">Link 1</a></li>
+          <li class="list-inline-item"><a class="text-dark" target="_blank" href="#">Link 2</a></li>
+          <li class="list-inline-item"><a class="text-dark" target="_blank" href="#">Link 3</a></li>
+        </ul>
+      </div>
+  </header>
 
   <!-- Row 1 -->
-  <div class="container bg-white">
-    <div class="row px-0 pt-0">
-      <a class="col-lg-8 px-0 col-md-12 fill" href="#">
-        <img class="d-inline-block" src="Images/pier.jpg" width="" height="400" alt="">
-      </a>
-      <div class="row1-padding col-lg-4 col-md-12">
-        <h6 class="text-primary pt-2 bold text-uppercase">lifestyles</h6>
-        <a href="#" class="text-dark">
-          <h4 class="text-uppercase pt-2 bold">drive nowhere: can you live car-less</h4>
+  <article id="main-story">
+    <div class="container bg-white">
+      <div class="row px-0 pt-0">
+        <a class="col-lg-8 px-0 col-md-12 fill" href="#">
+          <img class="d-inline-block" src="Images/pier.jpg" width="" height="400" alt="">
         </a>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-        <p>by<mark class="blue bold"> John Doe</mark>time and date</p>
+        <div class="row1-padding col-lg-4 col-md-12">
+          <h6 class="text-primary pt-2 bold text-uppercase">lifestyles</h6>
+          <a href="#" class="text-dark">
+            <h4 class="text-uppercase pt-2 bold">drive nowhere: can you live car-less</h4>
+          </a>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+          <p>by<mark class="blue bold"> John Doe</mark>time and date</p>
+        </div>
       </div>
     </div>
-  </div>
+  </article>
 
   <!-- First Horizontal Advertisement -->
   <div class="container">
@@ -79,26 +80,24 @@
   </div>
 
   <!-- News -->
-  <div class="container bg-white">
-    <!-- First Section -->
+  <section class="container bg-white">
     <div class="row row-outer-padding">
       <!--left column-->
       <div class="col-lg-3 col-md-6 col-sm-12">
-        <!-- first story-->
         <div class="bg-blue text-center">
           <h5 class="text-uppercase">Latest Stories</h5>
         </div>
-        <div class="pt-2 text-left">
+        <article class="pt-2 text-left">
           <a href="#" class="fill-small">
             <img src="Images/mountain.jpg" class="img-fluid" alt="">
           </a>
-          <a href="#" class="text-dark">
-            <p class="bold">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolon commodo luctus.</p>
+          <a href="#">
+            <p class="bold text-dark">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolon commodo luctus.</p>
           </a>
-        </div>
-        <hr>
+          <hr>
+        </article>
         <!-- smaller stories-->
-        <div class="row story-padding">
+        <article class="row story-padding">
           <div class="col-4 fill-small px-0">
             <a href="#">
               <img src="Images/mountain.jpg" alt="">
@@ -106,12 +105,12 @@
           </div>
           <div class="col-8 pl-1 bold">
             <a href="#">
-              <lead class="text-dark">Lorem ipsum dolor sit amet, consectetulit, sed d</lead>
+              <p class="bold text-dark">Vivamus sagittis lacus vel augu</p>
             </a>
           </div>
           <hr width="90%" style="display: block">
-        </div>
-        <div class="row story-padding">
+        </article>
+        <article class="row story-padding">
           <div class="col-4 fill-small px-0">
             <a href="#">
               <img src="Images/mountain.jpg" alt="">
@@ -119,12 +118,12 @@
           </div>
           <div class="col-8 pl-1 bold">
             <a href="#">
-              <lead class="text-dark">Lorem ipsum dolor sit amet, consectetulit, sed d</lead>
+              <p class="bold text-dark">Vivamus sagittis lacus vel augu</p>
             </a>
           </div>
           <hr width="90%" style="display: block">
-        </div>
-        <div class="row story-padding">
+        </article>
+        <article class="row story-padding">
           <div class="col-4 fill-small px-0">
             <a href="#">
               <img src="Images/mountain.jpg" alt="">
@@ -132,12 +131,12 @@
           </div>
           <div class="col-8 pl-1 bold">
             <a href="#">
-              <lead class="text-dark">Lorem ipsum dolor sit amet, consectetulit, sed d</lead>
+              <p class="bold text-dark">Vivamus sagittis lacus vel augu</p>
             </a>
           </div>
           <hr width="90%" style="display: block">
-        </div>
-        <div class="row story-padding">
+        </article>
+        <article class="row story-padding">
           <div class="col-4 fill-small px-0">
             <a href="#">
               <img src="Images/mountain.jpg" alt="">
@@ -145,12 +144,12 @@
           </div>
           <div class="col-8 pl-1 bold">
             <a href="#">
-              <lead class="text-dark">Lorem ipsum dolor sit amet, consectetulit, sed d</lead>
+              <p class="bold text-dark">Vivamus sagittis lacus vel augu</p>
             </a>
           </div>
           <hr width="90%" style="display: block">
-        </div>
-        <div class="row story-padding" id="RemoveNewsStories">
+        </article>
+        <article class="row story-padding" id="RemoveNewsStories">
           <div class="col-4 fill-small px-0">
             <a href="#">
               <img src="Images/mountain.jpg" alt="">
@@ -158,12 +157,12 @@
           </div>
           <div class="col-8 pl-1 bold">
             <a href="#">
-              <lead class="text-dark">Lorem ipsum dolor sit amet, consectetulit, sed d</lead>
+              <p class="bold text-dark">Vivamus sagittis lacus vel augu</p>
             </a>
           </div>
           <hr width="90%" style="display: block">
-        </div>
-        <div class="row story-padding" id="RemoveNewsStories">
+        </article>
+        <article class="row story-padding" id="RemoveNewsStories">
           <div class="col-4 fill-small px-0">
             <a href="#">
               <img src="Images/mountain.jpg" alt="">
@@ -171,19 +170,15 @@
           </div>
           <div class="col-8 pl-1 bold">
             <a href="#">
-              <lead class="text-dark">Lorem ipsum dolor sit amet, consectetulit, sed d</lead>
+              <p class="bold text-dark">Vivamus sagittis lacus vel augu</p>
             </a>
           </div>
-          <hr width="90%" style="display: block">
-        </div>
-
-
-
-
+        </article>
       </div>
+
       <!-- Center Column-->
       <div class="col-lg-6 col-md-6 col-sm-12">
-        <div class="pt-0 text-left">
+        <article class="pt-0 text-left">
           <a href="#" class="fill-small">
             <img src="Images/mountain.jpg" alt="">
           </a>
@@ -192,8 +187,8 @@
           </a>
           <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
           <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
-        </div>
-        <div class="pt-0 text-left">
+        </article>
+        <article class="pt-0 text-left">
           <a href="#" class="fill-small">
             <img src="Images/mountain.jpg" alt="">
           </a>
@@ -202,18 +197,17 @@
           </a>
           <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
           <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
-        </div>
+        </article>
       </div>
       <!-- Right Column-->
       <div class="col-lg-3" id="RemoveOnMediumScreen">
         <img src="Images/red.png" width="100%" height="1050" alt="">
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Videos -->
-  <div class="container bg-white">
-    <!-- Top Video Header-->
+  <!-- Videos Section -->
+  <section class="container bg-white">
     <div class="row row-outer-padding justify-content-center">
       <div class="col-3 bg-blue text-center pt-1">
         <h5 class="text-uppercase">Top Videos</h5>
@@ -222,28 +216,44 @@
     <div class="row row-outer-padding">
       <!-- Left Column -->
       <div class="col-lg-1 col-md-6 pt-3">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/19dIwTQk0GU" allowfullscreen></iframe>
-        </div>
-        <p class="bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
-        <div class="pt-3">
+        <article>
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/19dIwTQk0GU" allowfullscreen></iframe>
           </div>
-          <p class="bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
+          <a href="#">
+            <p class="bold text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
+          </a>
+        </article>
+        <div class="pt-3">
+          <article>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/19dIwTQk0GU" allowfullscreen></iframe>
+            </div>
+            <a href="#">
+              <p class="bold text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
+            </a>
+          </article>
         </div>
       </div>
       <!-- Middle Column -->
       <div class="col-lg-1 col-md-6 pt-3">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/19dIwTQk0GU" allowfullscreen></iframe>
-        </div>
-        <p class="bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
-        <div class="pt-3">
+        <article>
           <div class="embed-responsive embed-responsive-16by9">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/19dIwTQk0GU" allowfullscreen></iframe>
           </div>
-          <p class="bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
+          <a href="#">
+            <p class="bold text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
+          </a>
+        </article>
+        <div class="pt-3">
+          <article>
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/19dIwTQk0GU" allowfullscreen></iframe>
+            </div>
+            <a href="#">
+              <p class="bold text-dark">Lorem ipsum dolor sit amet, consectetur adipisicing elit dss odef idfio</p>
+            </a>
+          </article>
         </div>
       </div>
       <!-- Right Column -->
@@ -251,7 +261,8 @@
         <img src="Images/red.png" width="100%" height="550" alt="">
       </div>
     </div>
-  </div>
+  </section>
+
   <!-- Second Horizontal Advertisement-->
   <div class="container bg-white" id="RemoveSmallScreen">
     <div class="text-left pt-4 pb-4 pl-5">
@@ -259,9 +270,8 @@
     </div>
   </div>
 
-  <!-- More News -->
-  <div class="container bg-white">
-    <!-- More News Header -->
+  <!-- More News Section -->
+  <section class="container bg-white">
     <div class="row row-outer-padding justify-content-center">
       <div class="col-3 bg-blue text-center pt-1">
         <h5 class="text-uppercase">More News</h5>
@@ -277,15 +287,13 @@
               <img src="Images/hill.jpg" alt="">
             </a>
           </div>
-          <div class="col-lg-8 pr-0 pl-0">
-            <div class="pt-0 text-left">
-              <a href="#" class="text-dark">
-                <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
-              </a>
-              <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-              <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
-            </div>
-          </div>
+          <article class="col-lg-8 pr-0 pl-0 pt-0 text-left">
+            <a href="#" class="text-dark">
+              <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
+            </a>
+            <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
+          </article>
           <div class="col-lg-12">
             <hr>
           </div>
@@ -294,31 +302,13 @@
               <img src="Images/hill.jpg" alt="">
             </a>
           </div>
-          <div class="col-lg-8 pr-0 pl-0">
-            <div class="pt-0 text-left">
-              <a href="#" class="text-dark">
-                <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
-              </a>
-              <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-              <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
-            </div>
-          </div>
-          <div class="col-lg-12">
-            <hr>
-          </div><div class="col-lg-4">
-            <a href="#" class="fill-small">
-              <img src="Images/hill.jpg" alt="">
+          <article class="col-lg-8 pr-0 pl-0 pt-0 text-left">
+            <a href="#" class="text-dark">
+              <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
             </a>
-          </div>
-          <div class="col-lg-8 pr-0 pl-0">
-            <div class="pt-0 text-left">
-              <a href="#" class="text-dark">
-                <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
-              </a>
-              <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-              <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
-            </div>
-          </div>
+            <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
+          </article>
           <div class="col-lg-12">
             <hr>
           </div>
@@ -327,23 +317,36 @@
               <img src="Images/hill.jpg" alt="">
             </a>
           </div>
-          <div class="col-lg-8 pr-0 pl-0">
-            <div class="pt-0 text-left">
-              <a href="#" class="text-dark">
-                <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
-              </a>
-              <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
-              <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
-            </div>
+          <article class="col-lg-8 pr-0 pl-0 pt-0 text-left">
+            <a href="#" class="text-dark">
+              <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
+            </a>
+            <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
+          </article>
+          <div class="col-lg-12">
+            <hr>
           </div>
+          <div class="col-lg-4">
+            <a href="#" class="fill-small">
+              <img src="Images/hill.jpg" alt="">
+            </a>
+          </div>
+          <article class="col-lg-8 pr-0 pl-0 pt-0 text-left">
+            <a href="#" class="text-dark">
+              <h4 class="bold">Vivamus sagittis lacus dolon coodo luctus fadsu.</h4>
+            </a>
+            <p class="">Lorem ipsum dolor sit amet, tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+            <p class="pt-0">By <mark class="blue">Washington Post</mark> Time and date | <a href="#">News</a></p>
+          </article>
         </div>
       </div>
-      <!-- 2nd column Advertisement-->
+      <!-- Right column Advertisement-->
       <div class="col-lg-3 col-md-12 pt-3" id="RemoveOnMediumScreen">
         <img src="Images/red.png" width="100%" height="650" alt="">
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Spacing-->
   <div class="container pt-4 pb-4">
@@ -357,7 +360,7 @@
   </div>
 
   <!-- Footer -->
-  <div class="container-fluid bg-black">
+  <footer class="container-fluid bg-black">
     <!-- Navigation-->
     <div class="row">
       <div class="col-lg-3 col-md-6 text-white">
@@ -444,6 +447,7 @@
         <p></p>
       </div>
     </div>
+  </footer>
 
 </body>
 
