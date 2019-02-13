@@ -5,19 +5,19 @@
 }
 
 @media screen and (max-width:992px) {
-  #RemoveOnMediumScreen {
+  div.remove-on-medium-screen {
     display: none;
   }
 }
 
 @media screen and (max-width:1200px) {
-  #RemoveNewsStories {
+  article.remove-news-stories {
     display: none;
   }
 }
 
 @media screen and (max-width:768px) {
-  #RemoveSmallScreen {
+  div.remove-on-small-screen {
     display: none;
   }
 }
@@ -40,6 +40,15 @@
   flex-shrink: 0;
   min-width: 100%;
   min-height: 100%
+}
+
+hr {
+  min-width: 100%;
+}
+
+hr.footer {
+  width: 100%;
+  background-color: grey;
 }
 
 .fill-small {
